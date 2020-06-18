@@ -12,6 +12,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { EditarComponent } from './questao/editar/editar.component';
+import { FormsModule} from '@angular/forms'
+
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {environment} from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,11 @@ import { EditarComponent } from './questao/editar/editar.component';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    FormsModule
+    
     
 
   ],
