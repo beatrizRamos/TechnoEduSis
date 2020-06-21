@@ -1,5 +1,4 @@
 <mat-toolbar>
-
   <mat-toolbar-row class="head">
     <span>TechnoEduSis</span>
     <span class="space-button"></span>
@@ -18,62 +17,75 @@
 
 </mat-toolbar>
 
+
 <body>
+
   <h2 class="texto-centalizado">Inserir uma Questão</h2>
-  <form class="formulario">
+
+  <form class="formulario" (ngSubmit)="onSubmit()">
+
     <mat-form-field>
-      <mat-label>Disciplina</mat-label>
-      <textarea matInput></textarea>
+      <mat-label ng>Disciplina</mat-label>
+      <input matInput [(ngModel)]="novaQuestao.disciplina" name="disciplina">
     </mat-form-field>
+
     <mat-form-field>
       <mat-label>Assunto</mat-label>
-      <textarea matInput></textarea>
+      <input matInput [(ngModel)]="novaQuestao.assunto" name="assunto">
     </mat-form-field>
+
     <p>
-      <mat-form-field class="example-full-width">
-        <mat-label>Questão</mat-label>
-        <textarea matInput></textarea>
+      <mat-form-field class="input-big-width">
+        <mat-label>Enunciado da questão</mat-label>
+        <input matInput [(ngModel)]="novaQuestao.texto" name="texto">
       </mat-form-field>
     </p>
 
     <p>
       <mat-form-field>
         <mat-label>Potuação</mat-label>
-        <textarea matInput></textarea>
+        <input matInput [(ngModel)]="novaQuestao.pontuacao" name="pontuacao">
       </mat-form-field>
+
       <mat-form-field>
         <mat-label>Nível de Dificuldade</mat-label>
-        <textarea matInput></textarea>
+        <input matInput [(ngModel)]="novaQuestao.nivel_dificuldade" name="nivel_dificuldade">
       </mat-form-field>
     </p>
+
     <p>
       <mat-form-field>
         <mat-label>Tempo em segundos</mat-label>
-        <textarea matInput></textarea>
+        <input matInput [(ngModel)]="novaQuestao.tempo_segundos" name="tempo_segundos">
       </mat-form-field>
     </p>
+
     <p>
       <mat-form-field>
         <mat-label>Alternativa 1</mat-label>
         <textarea matInput></textarea>
       </mat-form-field>
     </p>
+
     <mat-form-field>
       <mat-label>Alternativa 2</mat-label>
       <textarea matInput></textarea>
     </mat-form-field>
+
     <p>
       <mat-form-field>
         <mat-label>Alternativa 3</mat-label>
         <textarea matInput></textarea>
       </mat-form-field>
     </p>
+
     <p>
       <mat-form-field>
         <mat-label>Alternativa 4</mat-label>
         <textarea matInput></textarea>
       </mat-form-field>
     </p>
+
     <p>
       <mat-form-field>
         <mat-label>Alternativa 5</mat-label>
@@ -81,10 +93,10 @@
       </mat-form-field>
     </p>
 
-      <div>
-        <button mat-raised-button class="example-button-row" color="primary">
-          Enviar <mat-icon>send</mat-icon></button>
-      </div>
+    <div>
+      <button mat-raised-button class="example-button-row" color="primary" type="submit">
+        Enviar <mat-icon>send</mat-icon></button>
+    </div>
 
   </form>
 </body>
